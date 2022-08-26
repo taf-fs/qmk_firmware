@@ -22,8 +22,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define VENDOR_ID       0x6B62
 #define PRODUCT_ID      0x1769
 #define DEVICE_VER      0x0001
-#define MANUFACTURER    coseyfannitutti
-#define PRODUCT         DISCIPAD
+#define MANUFACTURER    42. Keebs
+#define PRODUCT         Discipad
 
 /* key matrix size */
 #define MATRIX_ROWS 5

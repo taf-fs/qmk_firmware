@@ -16,37 +16,34 @@
 #include QMK_KEYBOARD_H
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [0] = LAYOUT_numpad_5x4(
+  [0] = LAYOUT_numpad_5x4_full(
       KC_NLCK, KC_PSLS, KC_PAST, KC_PMNS,
-      KC_P7,   KC_P8,   KC_P9,
+      KC_P7,   KC_P8,   KC_P9,   KC_A,
       KC_P4,   KC_P5,   KC_P6,   KC_PPLS,
-      KC_P1,   KC_P2,   KC_P3,
-      KC_P0,   KC_PDOT,          KC_PENT  ),
-  [1] = LAYOUT_numpad_5x4(
+      KC_P1,   KC_P2,   KC_P3,   KC_B,
+      KC_P0,   KC_COMM, KC_PDOT, KC_PENT  ),
+  [1] = LAYOUT_numpad_5x4_full(
       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-      KC_TRNS, KC_TRNS, KC_TRNS,
       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-      KC_TRNS, KC_TRNS, KC_TRNS,
-      KC_TRNS, KC_TRNS,          KC_TRNS  ),
-  [2] = LAYOUT_numpad_5x4(
       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-      KC_TRNS, KC_TRNS, KC_TRNS,
       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-      KC_TRNS, KC_TRNS, KC_TRNS,
-      KC_TRNS, KC_TRNS,          KC_TRNS  ),
-  [3] = LAYOUT_numpad_5x4(
+      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS  ),
+  [2] = LAYOUT_numpad_5x4_full(
       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-      KC_TRNS, KC_TRNS, KC_TRNS,
       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-      KC_TRNS, KC_TRNS, KC_TRNS,
-      KC_TRNS, KC_TRNS,          KC_TRNS  ),
+      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS  ),
+  [3] = LAYOUT_numpad_5x4_full(
+      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS  ),
 };
 
-bool encoder_update_user(uint8_t index, bool clockwise) {
-    if (clockwise) {
-        tap_code(KC_VOLU);
-    } else {
-        tap_code(KC_VOLD);
-    }
-    return true;
-}
+#if defined(ENCODER_MAP_ENABLE)
+const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
+    [_BL] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) }
+};
+#endif
