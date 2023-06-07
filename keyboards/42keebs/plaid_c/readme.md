@@ -1,22 +1,22 @@
-# plaid // Through Hole
+# Plaid-C
 
 ![plaid](https://i.imgur.com/tTi9yR9h.jpg)
 
-12x4 ortholinear keyboard with only through hole components.   
+12x4 ortholinear keyboard with only through hole components.
 
-Keyboard Maintainer: [hsgw](https://github.com/hsgw)  
-Hardware Supported: ATMEGA328p with vusb [PCB](https://github.com/hsgw/plaid)  
-Hardware Availability: Group buy in r/mk
+Keyboard Maintainer: [piit79](https://github.com/piit79)
+Hardware Supported: ATmega328p with vusb [PCB](https://github.com/piit79/plaid-c) - based on the original [Plaid](https://github.com/hsgw/plaid) by [hsgw](https://github.com/hsgw)
+Hardware Availability: [42. Keebs](https://42keebs.eu/shop/kits/with-discrete-mcu/plaid-c-40-ortho-kit-black-white/)
 
 Make example for this keyboard (after setting up your build environment):
-    make dm9records/plaid:default
+    make 42keebs/plaid:default
 
 Flashing example for this keyboard:
 
-    make dm9records/plaid:default:flash
+    make 42keebs/plaid:default:flash
 
 ## Bootloader
-use usbasploader in my repository.
+Use usbasploader in hsgw's repository.
 https://github.com/hsgw/USBaspLoader/tree/plaid
 
 
