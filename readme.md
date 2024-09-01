@@ -37,7 +37,7 @@ QMK is developed and maintained by Jack Humbert of OLKB with contributions from 
 
 ### taf edit: personalized Sofle keymap
 
-![layers graphic](./taf-fs/layers.jpg)
+![layers graphic](./layers.jpg)
 Access the `Adjust` layer by pressing and holding the `Raise` and `Lower` key
 `Adjust + F` to switch to the Mac layer
 `Adjust + J` to switch to the Mac layer with the Czech diacritic dead key
