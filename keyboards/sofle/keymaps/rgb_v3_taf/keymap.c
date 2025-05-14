@@ -124,7 +124,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------| Play  |    | Prev/Next  --+------+------+------+------+------|
  * |LShift|   Z  |   X  |   C  |   V  |   B  |-------|    |-------|   N  |   M  |   ,  |   .  |   /  |RShift|
  * `-----------------------------------------/       /     \      \-----------------------------------------'
- *            | Ctrl | Opt  | Cmd  | Raise| /Space  /       \Enter \  |Lower | Cmd  | Opt  | Ctrl |
+ *            | Ctrl | Opt  | Cmd  | Raise| /Space  /       \Enter \  |Lower |Hacek | Opt  | Ctrl |
  *            |      |      |      |      |/       /         \      \ |      |      |      |      |
  *            `----------------------------------'           '------''---------------------------'
  */
@@ -138,7 +138,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //|------+-------+--------+--------+--------+------|  ===  |   |  ===  |--------+-------+--------+--------+--------+---------|
     KC_LSFT,  KC_Z,   KC_X,    KC_C,    KC_V,    KC_B,  KC_MPLY,    TD(TD_NEXT_PREV)  ,KC_N,    KC_M,   KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
     //|------+-------+--------+--------+--------+------|  ===  |   |  ===  |--------+-------+--------+--------+--------+---------|
-                    KC_LCTL, KC_LALT, KC_LGUI, KC_RAISE, KC_SPC,     KC_ENT, KC_LOWER ,KC_RGUI, KC_RALT, KC_RCTL
+                    KC_LCTL, KC_LALT, KC_LGUI, KC_RAISE, KC_SPC,     KC_ENT, KC_LOWER ,TD(TD_HACEK_CARKA), KC_RALT, KC_RCTL
     //            \--------+--------+--------+---------+-------|   |--------+---------+--------+---------+-------/
 ),
 
